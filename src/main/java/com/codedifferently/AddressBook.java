@@ -1,6 +1,7 @@
 package com.codedifferently;
 
 import com.codedifferently.database.DataBase;
+import com.codedifferently.database.DataBaseConnectionException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +13,8 @@ public class AddressBook {
     private DataBase dataBase;
     private Person owner;
     private List<Person> people;
+
+
 
     public AddressBook(DataBase dataBase) {
         this.people = new ArrayList<>();
