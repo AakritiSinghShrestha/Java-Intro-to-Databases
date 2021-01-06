@@ -27,8 +27,19 @@ public class PersonTest {
     }
 
     @Test
-    public void getLatNameTest(){
+    public void getLastNameTest(){
         String expected = "Shrestha";
+
+        String actual = person.getLastName();
+
+        Assert.assertEquals(expected,actual);
+    }
+
+
+    @Test
+    public void setLastNameTest(){
+        person.setLastName("Mishra");
+        String expected = "Mishra";
 
         String actual = person.getLastName();
 
