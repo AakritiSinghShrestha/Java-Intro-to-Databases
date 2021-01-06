@@ -58,6 +58,7 @@ public class Main {
                         break;
                     case 1:
                         System.out.println("Enter the person name!!");
+
                         break;
                     default:
                         break;

@@ -2,6 +2,10 @@ package com.codedifferently;
 
 import com.codedifferently.database.DataBase;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddressBook {
@@ -9,7 +13,8 @@ public class AddressBook {
     private Person owner;
     private List<Person> people;
 
-    public AddressBook(DataBase dataBase){
+    public AddressBook(DataBase dataBase) {
+        this.people = new ArrayList<>();
         this.dataBase = dataBase;
     }
 
@@ -17,19 +22,46 @@ public class AddressBook {
         return owner;
     }
 
-    public void setOwner(Person owner) {
-        this.owner = owner;
+    public void setOwner(Person person) {
+        this.owner = person;
     }
 
-    public void addPerson(Person p) {
-        people.add(p);
-    }
+    // public void addPerson(Person person, Connection connection) throws SQLException
+//        {
+//            String query = "INSERT INTO Users ("
+//                    + " first_name,"
+//                    + " last_name,"
+//                    + " email,"
+//                    + " age) VALUES ("
+//                    + "?, ?, ?, ?)";
+//
+//            try {
+//                // set all the preparedstatement parameters
+//                PreparedStatement st = connection.prepareStatement(query);
+//                st.setString(1, person.getFirstName());
+//                st.setString(2, person.getLastName());
+//                st.setString(3, person.getEmail());
+//                st.setInt(4,person.getAge());
+//                // execute the preparedstatement insert
+//                st.executeUpdate();
+//                st.close();
+//            }
+//            catch (SQLException se)
+//            {
+//                // log exception
+//                throw se;
+//            }
+//        }
+    public void addPerson(Person person){
+        people.add(person);
+}
 
-    public void removePerson(Person p) {
-        people.remove(p);
+    public void removePerson(Person person) {
+        people.remove(person);
     }
 
     public Person getPersonByEmail(String email) {
+
         return null;
     }
 
@@ -38,6 +70,6 @@ public class AddressBook {
     }
 
     public boolean saveAll(){
-        return true;
+        return false;
     }
 }
