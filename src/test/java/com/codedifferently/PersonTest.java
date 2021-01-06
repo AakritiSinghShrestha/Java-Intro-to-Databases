@@ -65,4 +65,24 @@ public class PersonTest {
 
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void getEmailTest(){
+        String expected = "Aakriti.stha00@gmail.com";
+
+         String actual= person.getEmail();
+
+        Assert.assertEquals(expected,actual);
+    }
+
+
+    @Test
+    public void setEmailTest(){
+        person.setEmail("RiyaMishra00@gmail.com");
+        String expected = "RiyaMishra00@gmail.com";
+
+        String actual = person.getEmail();
+
+        Assert.assertEquals(expected,actual);
+    }
 }
