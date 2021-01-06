@@ -25,4 +25,13 @@ public class PersonTest {
 
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void getLatNameTest(){
+        String expected = "Shrestha";
+
+        String actual = person.getLastName();
+
+        Assert.assertEquals(expected,actual);
+    }
 }
