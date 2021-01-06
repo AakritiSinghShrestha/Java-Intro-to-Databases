@@ -45,4 +45,24 @@ public class PersonTest {
 
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void getAgeTest(){
+        Integer expected = 26;
+
+        Integer actual = person.getAge();
+
+        Assert.assertEquals(expected,actual);
+    }
+
+
+    @Test
+    public void setAgeTest(){
+        person.setAge(20);
+        Integer expected = 20;
+
+        Integer actual = person.getAge();
+
+        Assert.assertEquals(expected,actual);
+    }
 }
