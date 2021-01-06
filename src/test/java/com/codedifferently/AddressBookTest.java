@@ -1,4 +1,4 @@
 package com.codedifferently;
 
-public class AddressTest {
+public class AddressBookTest {
 }
