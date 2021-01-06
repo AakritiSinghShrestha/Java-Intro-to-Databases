@@ -26,6 +26,11 @@ public class AddressBookTest {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void addPersonTest(){
+        Person expected = person;
+        Person actual = addressBook.addPerson(person.);
 
+}
 
 }
