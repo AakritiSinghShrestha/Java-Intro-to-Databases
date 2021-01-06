@@ -1,11 +1,7 @@
 package com.codedifferently;
 
 import com.codedifferently.database.DataBase;
-import com.codedifferently.database.DataBaseConnectionException;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,9 +51,10 @@ public class AddressBook {
 //                throw se;
 //            }
 //        }
-    public void addPerson(Person person){
+    public Person addPerson(Person person){
         people.add(person);
-}
+        return person;
+    }
 
     public void removePerson(Person person) {
         people.remove(person);
